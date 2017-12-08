@@ -1,14 +1,41 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="navbarColor">
+    <button ion-button icon-only menuToggle>
+    	<ion-icon name="menu"></ion-icon>
+    </button>
+  	<ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+
     <ion-title>
-      Ionic Blank
+      <h2 id="title">Concentrado de noticias</h2>
     </ion-title>
+   
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+<h2 text-center>Noticias destacadas</h2>
+<div style="height: 300px;">
+  		
+  	<ion-slides pager>
+		<ion-slide style="background-color: green">
+		<h2>Slide 1</h2>
+		</ion-slide>
+
+		<ion-slide style="background-color: blue">
+		<h2>Slide 2</h2>
+		</ion-slide>
+
+		<ion-slide style="background-color: red">
+		<h2>Slide 3</h2>
+		</ion-slide>
+    </ion-slides>
+</div>
+  <ion-item *ngFor="let user of users">
+  	<h2>{{user.title}}</h2>
+  </ion-item>
 </ion-content>
